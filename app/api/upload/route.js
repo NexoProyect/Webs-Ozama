@@ -42,6 +42,7 @@ export async function POST(req) {
     const page = await put(`alumnos/${slug}/index.html`, html, {
       access: "public",
       contentType: "text/html; charset=utf-8",
+      contentDisposition: "inline",
       addRandomSuffix: false,
       allowOverwrite: true,
     });
